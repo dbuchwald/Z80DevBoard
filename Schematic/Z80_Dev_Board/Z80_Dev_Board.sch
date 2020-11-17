@@ -1197,4 +1197,110 @@ GND
 Text GLabel 5350 7300 0    50   Input ~ 0
 GND
 NoConn ~ 6050 7400
+Entry Wire Line
+	3000 1250 3100 1150
+Entry Wire Line
+	3000 1350 3100 1250
+Entry Wire Line
+	3000 1450 3100 1350
+Entry Wire Line
+	3000 1550 3100 1450
+Entry Wire Line
+	3000 1650 3100 1550
+Entry Wire Line
+	3000 1750 3100 1650
+Entry Wire Line
+	3000 1850 3100 1750
+Entry Wire Line
+	3000 1950 3100 1850
+Entry Wire Line
+	3000 2050 3100 1950
+Entry Wire Line
+	3000 2150 3100 2050
+Entry Wire Line
+	3000 2250 3100 2150
+Entry Wire Line
+	3000 2350 3100 2250
+Entry Wire Line
+	3000 2450 3100 2350
+Entry Wire Line
+	3000 2550 3100 2450
+Entry Wire Line
+	3000 2650 3100 2550
+Entry Wire Line
+	3000 2750 3100 2650
+Entry Wire Line
+	3000 2950 3100 2850
+Entry Wire Line
+	3000 3050 3100 2950
+Entry Wire Line
+	3000 3150 3100 3050
+Entry Wire Line
+	3000 3250 3100 3150
+Entry Wire Line
+	3000 3350 3100 3250
+Entry Wire Line
+	3000 3450 3100 3350
+Entry Wire Line
+	3000 3550 3100 3450
+Entry Wire Line
+	3000 3650 3100 3550
+Wire Wire Line
+	3000 3650 2850 3650
+Wire Wire Line
+	2850 3550 3000 3550
+Wire Wire Line
+	2850 3450 3000 3450
+Wire Wire Line
+	2850 3350 3000 3350
+Wire Wire Line
+	2850 3250 3000 3250
+Wire Wire Line
+	2850 3150 3000 3150
+Wire Wire Line
+	2850 3050 3000 3050
+Wire Wire Line
+	2850 2950 3000 2950
+Wire Wire Line
+	2850 2750 3000 2750
+Wire Wire Line
+	2850 2650 3000 2650
+Wire Wire Line
+	2850 2550 3000 2550
+Wire Wire Line
+	2850 2450 3000 2450
+Wire Wire Line
+	2850 2350 3000 2350
+Wire Wire Line
+	2850 2250 3000 2250
+Wire Wire Line
+	2850 2150 3000 2150
+Wire Wire Line
+	2850 2050 3000 2050
+Wire Wire Line
+	2850 1950 3000 1950
+Wire Wire Line
+	2850 1850 3000 1850
+Wire Wire Line
+	2850 1750 3000 1750
+Wire Wire Line
+	2850 1650 3000 1650
+Wire Wire Line
+	2850 1550 3000 1550
+Wire Wire Line
+	2850 1450 3000 1450
+Wire Wire Line
+	2850 1350 3000 1350
+Wire Wire Line
+	2850 1250 3000 1250
+Text GLabel 3200 2850 2    50   BiDi ~ 0
+d[0..7]
+Wire Bus Line
+	3100 2850 3200 2850
+Text GLabel 3100 1050 1    50   BiDi ~ 0
+a[0..15]
+Wire Bus Line
+	3100 2850 3100 3550
+Wire Bus Line
+	3100 1050 3100 2550
 $EndSCHEMATC
