@@ -899,6 +899,21 @@ Text GLabel 5500 1550 1    50   BiDi ~ 0
 d[0..7]
 Text GLabel 6450 1550 1    50   BiDi ~ 0
 a[0..15]
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5FB6421F
+P 4200 3400
+F 0 "TP1" H 4258 3518 50  0000 L CNN
+F 1 "TestPoint" H 4258 3427 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Keystone_5005-5009_Compact" H 4400 3400 50  0001 C CNN
+F 3 "~" H 4400 3400 50  0001 C CNN
+	1    4200 3400
+	1    0    0    -1  
+$EndComp
+Text GLabel 4200 3500 3    50   Input ~ 0
+GND
+Wire Wire Line
+	4200 3500 4200 3400
 Wire Bus Line
 	5500 1550 5500 2350
 Wire Bus Line
