@@ -470,36 +470,36 @@ Text Label 5700 2350 2    50   ~ 0
 d6
 Text Label 5700 2450 2    50   ~ 0
 d7
-Text GLabel 5500 2450 1    50   Input ~ 0
-Z80_CLK
 Text GLabel 5350 2450 1    50   Input ~ 0
+Z80_CLK
+Text GLabel 5200 2450 1    50   Input ~ 0
 ~RESET
 Wire Wire Line
-	5350 2450 5350 2650
+	5200 2450 5200 2650
 Wire Wire Line
-	5350 2650 5700 2650
+	5200 2650 5700 2650
 Wire Wire Line
-	5500 2450 5500 2550
+	5350 2450 5350 2550
 Wire Wire Line
-	5500 2550 5700 2550
-Text GLabel 5200 2450 1    50   Input ~ 0
+	5350 2550 5700 2550
+Text GLabel 5050 2450 1    50   Input ~ 0
 ~RD
 Wire Wire Line
-	5200 2450 5200 2750
+	5050 2450 5050 2750
 Wire Wire Line
-	5200 2750 5700 2750
-Text GLabel 5050 2450 1    50   Input ~ 0
+	5050 2750 5700 2750
+Text GLabel 4900 2450 1    50   Input ~ 0
 ~WR
 Wire Wire Line
-	5050 2450 5050 2850
+	4900 2450 4900 2850
 Wire Wire Line
-	5050 2850 5700 2850
-Text GLabel 4900 2450 1    50   Input ~ 0
+	4900 2850 5700 2850
+Text GLabel 4750 2450 1    50   Input ~ 0
 ~MREQ
 Wire Wire Line
-	4900 2450 4900 2950
+	4750 2450 4750 2950
 Wire Wire Line
-	4900 2950 5700 2950
+	4750 2950 5700 2950
 Text GLabel 5000 3550 3    50   Input ~ 0
 ~IORQ
 Text GLabel 5600 3550 3    50   Output ~ 0
@@ -799,4 +799,108 @@ Wire Wire Line
 	1900 3050 1800 3050
 Wire Wire Line
 	2950 3050 3250 3050
+Entry Wire Line
+	5500 1650 5600 1750
+Entry Wire Line
+	5500 1750 5600 1850
+Entry Wire Line
+	5500 1850 5600 1950
+Entry Wire Line
+	5500 1950 5600 2050
+Entry Wire Line
+	5500 2050 5600 2150
+Entry Wire Line
+	5500 2150 5600 2250
+Entry Wire Line
+	5500 2250 5600 2350
+Entry Wire Line
+	5500 2350 5600 2450
+Wire Wire Line
+	5600 2450 5700 2450
+Wire Wire Line
+	5600 2350 5700 2350
+Wire Wire Line
+	5600 2250 5700 2250
+Wire Wire Line
+	5600 2150 5700 2150
+Wire Wire Line
+	5600 2050 5700 2050
+Wire Wire Line
+	5600 1950 5700 1950
+Wire Wire Line
+	5600 1850 5700 1850
+Wire Wire Line
+	5600 1750 5700 1750
+Entry Wire Line
+	6350 1750 6450 1650
+Entry Wire Line
+	6350 1850 6450 1750
+Entry Wire Line
+	6350 1950 6450 1850
+Entry Wire Line
+	6350 2050 6450 1950
+Entry Wire Line
+	6350 2150 6450 2050
+Entry Wire Line
+	6350 2250 6450 2150
+Entry Wire Line
+	6350 2350 6450 2250
+Entry Wire Line
+	6350 2450 6450 2350
+Entry Wire Line
+	6350 2550 6450 2450
+Entry Wire Line
+	6350 2650 6450 2550
+Entry Wire Line
+	6350 2750 6450 2650
+Entry Wire Line
+	6350 2850 6450 2750
+Entry Wire Line
+	6350 2950 6450 2850
+Entry Wire Line
+	6350 3050 6450 2950
+Entry Wire Line
+	6350 3150 6450 3050
+Entry Wire Line
+	6350 3250 6450 3150
+Wire Wire Line
+	6350 3250 6200 3250
+Wire Wire Line
+	6200 3150 6350 3150
+Wire Wire Line
+	6200 3050 6350 3050
+Wire Wire Line
+	6200 2950 6350 2950
+Wire Wire Line
+	6200 2850 6350 2850
+Wire Wire Line
+	6200 2750 6350 2750
+Wire Wire Line
+	6200 2650 6350 2650
+Wire Wire Line
+	6200 2550 6350 2550
+Wire Wire Line
+	6200 2450 6350 2450
+Wire Wire Line
+	6200 2350 6350 2350
+Wire Wire Line
+	6200 2250 6350 2250
+Wire Wire Line
+	6200 2150 6350 2150
+Wire Wire Line
+	6200 2050 6350 2050
+Wire Wire Line
+	6200 1950 6350 1950
+Wire Wire Line
+	6200 1850 6350 1850
+Wire Wire Line
+	6200 1750 6350 1750
+Text GLabel 5500 1550 1    50   BiDi ~ 0
+d[0..7]
+Text GLabel 6450 1550 1    50   BiDi ~ 0
+a[0..15]
+Wire Bus Line
+	5500 1550 5500 2350
+Wire Bus Line
+	6450 1550 6450 3150
 $EndSCHEMATC
