@@ -13,17 +13,6 @@ Comment2 ""
 Comment3 "Open Source Hardware"
 Comment4 "Created by Dawid Buchwald"
 $EndDescr
-$Comp
-L Connector_Generic:Conn_02x18_Odd_Even J1
-U 1 1 5FB78A65
-P 2350 2200
-F 0 "J1" H 2400 3217 50  0000 C CNN
-F 1 "MCU Interface" H 2400 3126 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x18_P2.54mm_Vertical" H 2350 2200 50  0001 C CNN
-F 3 "~" H 2350 2200 50  0001 C CNN
-	1    2350 2200
-	1    0    0    -1  
-$EndComp
 Text GLabel 2050 1300 1    50   Input ~ 0
 +5V
 Wire Wire Line
@@ -99,7 +88,7 @@ Wire Wire Line
 Wire Wire Line
 	1900 3050 1900 3000
 Wire Wire Line
-	1900 3000 2150 3000
+	1900 3000 2050 3000
 Wire Wire Line
 	3250 2900 3150 2900
 Wire Wire Line
@@ -107,13 +96,13 @@ Wire Wire Line
 Wire Wire Line
 	1800 2900 1900 2900
 Wire Wire Line
-	1900 2900 2150 2900
+	1900 2900 2050 2900
 Text GLabel 1800 3050 0    50   Output ~ 0
 ~DBG_BUSRQ
 Wire Wire Line
 	1800 2300 1900 2300
 Wire Wire Line
-	1900 2300 2150 2300
+	1900 2300 2050 2300
 Text GLabel 3250 2900 2    50   Output ~ 0
 ~WAIT
 Text GLabel 1800 2900 0    50   Output ~ 0
@@ -325,7 +314,7 @@ AR Path="/5FBA6D8A" Ref="J?"  Part="1"
 AR Path="/5FB5970D/5FBA6D8A" Ref="J3"  Part="1" 
 F 0 "J3" H 3000 5400 50  0000 C CNN
 F 1 "MCU Interface 2" V 3100 4600 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3000 4950 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 3000 4950 50  0001 C CNN
 F 3 "~" H 3000 4950 50  0001 C CNN
 	1    3000 4950
 	1    0    0    -1  
@@ -404,15 +393,15 @@ op7
 $Comp
 L Connector_Generic:Conn_02x18_Odd_Even J?
 U 1 1 5FBB88CB
-P 5900 2550
+P 6000 2550
 AR Path="/5FBB88CB" Ref="J?"  Part="1" 
 AR Path="/5FB5970D/5FBB88CB" Ref="J2"  Part="1" 
-F 0 "J2" H 5950 3567 50  0000 C CNN
-F 1 "Expansion port" H 5950 3476 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x18_P2.54mm_Vertical" H 5900 2550 50  0001 C CNN
-F 3 "~" H 5900 2550 50  0001 C CNN
-	1    5900 2550
-	1    0    0    -1  
+F 0 "J2" H 6050 3567 50  0000 C CNN
+F 1 "Expansion port" H 6050 3476 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x18_P2.54mm_Vertical" H 6000 2550 50  0001 C CNN
+F 3 "~" H 6000 2550 50  0001 C CNN
+	1    6000 2550
+	-1   0    0    -1  
 $EndComp
 Text Label 6200 1750 0    50   ~ 0
 a0
@@ -914,6 +903,28 @@ Text GLabel 4200 3500 3    50   Input ~ 0
 GND
 Wire Wire Line
 	4200 3500 4200 3400
+$Comp
+L Connector_Generic:Conn_02x18_Odd_Even J1
+U 1 1 5FB78A65
+P 2450 2200
+F 0 "J1" H 2500 3217 50  0000 C CNN
+F 1 "MCU Interface" H 2500 3126 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x18_P2.54mm_Vertical" H 2450 2200 50  0001 C CNN
+F 3 "~" H 2450 2200 50  0001 C CNN
+	1    2450 2200
+	-1   0    0    -1  
+$EndComp
+Connection ~ 2050 1400
+Connection ~ 2050 2300
+Wire Wire Line
+	2050 2300 2150 2300
+Connection ~ 2050 2900
+Wire Wire Line
+	2050 2900 2150 2900
+Connection ~ 2050 3000
+Wire Wire Line
+	2050 3000 2150 3000
+Connection ~ 2050 3100
 Wire Bus Line
 	5500 1550 5500 2350
 Wire Bus Line
