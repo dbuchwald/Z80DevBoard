@@ -1,0 +1,1 @@
+        ld sp, 0FFFFh
