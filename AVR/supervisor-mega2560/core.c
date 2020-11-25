@@ -33,8 +33,8 @@ void initSystem(void) {
   // default control lines values
   // debug clock to be used
   CLKSEL_POUT  &= ~CLKSEL_BIT;
-  // reset line low, clock low, wait high and busrq high
-  updateControlRegister(WAIT_BIT | BUSRQ_BIT, 0xff);
+  // reset line high, clock low, wait high and busrq high
+  updateControlRegister(RESET_BIT | WAIT_BIT | BUSRQ_BIT, 0xff);
 
   // init timer
   initTimer();

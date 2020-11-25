@@ -26,8 +26,8 @@
 
 #define RESET_BIT    _BV(PB3)
 #define WAIT_BIT     _BV(PB2)
-#define CLK_BIT      _BV(PB1)
-#define BUSRQ_BIT    _BV(PB0)
+#define BUSRQ_BIT    _BV(PB1)
+#define CLK_BIT      _BV(PB0)
 
 #define BUSACK_BIT   _BV(PK0)
 #define RD_BIT       _BV(PK1)

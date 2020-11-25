@@ -17,7 +17,7 @@
 // #define LAST_INSTRUCTIONS_COUNT 16
 
 // use BUSACK_BIT as uninitialized flag in buffer
-#define UNINITIALIZED BUSACK_BIT
+#define INITIALIZED BUSACK_BIT
 
 typedef struct {
   uint8_t addrMSB;
@@ -64,13 +64,14 @@ void runMonitorShell(void) {
   displayHelp();
   while (keep_going) {
     status_register = STATUS_PIN; 
-    printf("Debugger [z|x|g|f|r|b|n|m|h|q] <CLK: %c |RD: %c |WR: %c |M1: %c |MREQ: %c |IORQ: %c |RFSH: %c |HALT: %c >", 
+    printf("Debugger [z|x|g|f|r|b|n|m|h|q] <CLK: %c |RD: %c |WR: %c |M1: %c |MREQ: %c |IORQ: %c |BUSACK: %c |RFSH: %c |HALT: %c >", 
            clock_state ? '1' : '0',
            status_register & RD_BIT ? '0' : '1',
            status_register & WR_BIT ? '0' : '1',
            status_register & M1_BIT ? '0' : '1',
            status_register & MREQ_BIT ? '0' : '1',
            status_register & IORQ_BIT ? '0' : '1',
+           status_register & BUSACK_BIT ? '0' : '1',
            status_register & RFSH_BIT ? '0' : '1',
            status_register & HALT_BIT ? '0' : '1');
     unsigned char c = getc(stdin);
@@ -179,7 +180,7 @@ static void initBuffer(cycle_buffer* buffer) {
     buffer->cycles[buffer->write_ptr].addrMSB = 0;
     buffer->cycles[buffer->write_ptr].addrLSB = 0;
     buffer->cycles[buffer->write_ptr].data = 0;
-    buffer->cycles[buffer->write_ptr].ctrl = UNINITIALIZED; // indicates that this is uninitialized entry
+    buffer->cycles[buffer->write_ptr].ctrl = ~INITIALIZED; // indicates that this is uninitialized entry
     buffer->write_ptr++;
   } while (buffer->write_ptr);
 }
@@ -404,14 +405,15 @@ static void renderOpcode(cycle_buffer* buffer, uint8_t* pointer) {
 */
 static void renderSingleCycle(cpu_cycle* cycle_ptr) {
   char serial_buffer[64];
-  if (!(cycle_ptr->ctrl & UNINITIALIZED)) {
-    sprintf(serial_buffer, "  %02x%02x: [%c|%c] [%c|%c] %02x %c %c\n", 
+  if (cycle_ptr->ctrl & INITIALIZED) {
+    sprintf(serial_buffer, "  %02x%02x: [%c|%c] [%c|%c] [%c] %02x %c %c\n", 
                            cycle_ptr->addrMSB, 
                            cycle_ptr->addrLSB, 
                            cycle_ptr->ctrl & RD_BIT ? ' ' : 'R',
                            cycle_ptr->ctrl & WR_BIT ? ' ' : 'W',
                            cycle_ptr->ctrl & MREQ_BIT ? ' ' : 'M',
                            cycle_ptr->ctrl & IORQ_BIT ? ' ' : 'I',
+                           cycle_ptr->ctrl & RFSH_BIT ? ' ' : 'R',
                            cycle_ptr->data,
                            cycle_ptr->ctrl & M1_BIT ? ' ' : '1',
                            cycle_ptr->ctrl & HALT_BIT ? ' ' : 'H');
@@ -436,13 +438,14 @@ static void toggleClock(cycle_buffer* buffer) {
   uint8_t ctrl    = STATUS_PIN;
 
   //print the data to output
-  sprintf(serial_buffer, "  %02x%02x: [%c|%c] [%c|%c] %02x %c %c <%c>\n", 
+  sprintf(serial_buffer, "  %02x%02x: [%c|%c] [%c|%c] [%c] %02x %c %c <%c>\n", 
                           addrMSB, 
                           addrLSB, 
                           ctrl & RD_BIT ? ' ' : 'R',
                           ctrl & WR_BIT ? ' ' : 'W',
                           ctrl & MREQ_BIT ? ' ' : 'M',
                           ctrl & IORQ_BIT ? ' ' : 'I',
+                          ctrl & RFSH_BIT ? ' ' : 'R',
                           data,
                           ctrl & M1_BIT ? ' ' : '1',
                           ctrl & HALT_BIT ? ' ' : 'H',
