@@ -1,0 +1,1 @@
+        ld SP, 0xffff

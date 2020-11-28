@@ -1,8 +1,8 @@
-        org 0000h
+        org 0x0000
 start:  
-        include "init.i"
-        ld hl, 00200h
+        include "init.inc"
+        ld HL, 0x0200
 loop:
-        ld (hl), 055h
-        ld (hl), 0AAh
+        ld (HL), 0x55
+        ld (HL), 0xaa
         jp loop
