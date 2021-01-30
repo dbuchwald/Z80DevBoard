@@ -918,7 +918,7 @@ IORQ
 Wire Wire Line
 	8750 1650 8950 1650
 Text Label 8950 1850 2    50   ~ 0
-a15
+a7
 Text GLabel 9650 1750 2    50   Output ~ 0
 ~UART
 Wire Wire Line
