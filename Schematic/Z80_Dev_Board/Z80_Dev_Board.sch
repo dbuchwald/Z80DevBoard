@@ -142,12 +142,12 @@ Wire Wire Line
 Wire Wire Line
 	4700 800  4700 900 
 $Comp
-L Device:C_Small C2
+L Device:C_Small C7
 U 1 1 5FB73A1D
 P 4900 900
-F 0 "C2" V 5129 900 50  0000 C CNN
+F 0 "C7" V 5129 900 50  0000 C CNN
 F 1 "0,1uF" V 5038 900 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 4900 900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4900 900 50  0001 C CNN
 F 3 "~" H 4900 900 50  0001 C CNN
 	1    4900 900 
 	0    -1   -1   0   
@@ -162,12 +162,12 @@ Connection ~ 4700 900
 Wire Wire Line
 	4700 900  4700 1000
 $Comp
-L Device:C_Small C1
+L Device:C_Small C3
 U 1 1 5FB7487D
 P 2350 850
-F 0 "C1" V 2579 850 50  0000 C CNN
+F 0 "C3" V 2579 850 50  0000 C CNN
 F 1 "0,1uF" V 2488 850 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 2350 850 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2350 850 50  0001 C CNN
 F 3 "~" H 2350 850 50  0001 C CNN
 	1    2350 850 
 	0    -1   -1   0   
@@ -184,12 +184,12 @@ Text GLabel 6800 800  1    50   Input ~ 0
 Wire Wire Line
 	6800 1000 6700 1000
 $Comp
-L 6502:62256 U3
+L 6502:62256 U7
 U 1 1 5FB7CB21
 P 6200 1650
-F 0 "U3" H 6200 1750 50  0000 C CNN
-F 1 "62256" H 6200 1650 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W15.24mm_Socket" H 6150 2450 50  0001 C CNN
+F 0 "U7" H 6200 1750 50  0000 C CNN
+F 1 "71256" H 6200 1650 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W7.62mm_Socket" H 6150 2450 50  0001 C CNN
 F 3 "" H 6200 1650 50  0001 C CNN
 	1    6200 1650
 	1    0    0    -1  
@@ -259,12 +259,12 @@ Wire Wire Line
 Wire Wire Line
 	6800 800  6800 900 
 $Comp
-L Device:C_Small C3
+L Device:C_Small C9
 U 1 1 5FB7CB4B
 P 7000 900
-F 0 "C3" V 7229 900 50  0000 C CNN
+F 0 "C9" V 7229 900 50  0000 C CNN
 F 1 "0,1uF" V 7138 900 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 7000 900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7000 900 50  0001 C CNN
 F 3 "~" H 7000 900 50  0001 C CNN
 	1    7000 900 
 	0    -1   -1   0   
@@ -279,12 +279,12 @@ Connection ~ 6800 900
 Wire Wire Line
 	6800 900  6800 1000
 $Comp
-L 6502:62256 U2
+L 6502:62256 U5
 U 1 1 5FB5EA90
 P 4100 1650
-F 0 "U2" H 4100 1750 50  0000 C CNN
-F 1 "62256" H 4100 1650 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W15.24mm_Socket" H 4050 2450 50  0001 C CNN
+F 0 "U5" H 4100 1750 50  0000 C CNN
+F 1 "71256" H 4100 1650 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W7.62mm_Socket" H 4050 2450 50  0001 C CNN
 F 3 "" H 4100 1650 50  0001 C CNN
 	1    4100 1650
 	1    0    0    -1  
@@ -295,8 +295,6 @@ Text GLabel 600  3800 3    50   Output ~ 0
 ~RD
 Text GLabel 750  3800 3    50   Output ~ 0
 ~WR
-Text GLabel 1000 1150 1    50   Input ~ 0
-+5V
 Text GLabel 1200 1150 1    50   Input ~ 0
 Z80_CLK
 Text GLabel 1200 3800 3    50   Input ~ 0
@@ -385,12 +383,12 @@ CLK
 Wire Wire Line
 	3950 3800 4050 3800
 $Comp
-L Device:C_Small C5
+L Device:C_Small C6
 U 1 1 5FC01FC4
 P 3850 3400
-F 0 "C5" V 4079 3400 50  0000 C CNN
+F 0 "C6" V 4079 3400 50  0000 C CNN
 F 1 "0,1uF" V 3988 3400 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 3850 3400 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3850 3400 50  0001 C CNN
 F 3 "~" H 3850 3400 50  0001 C CNN
 	1    3850 3400
 	0    -1   -1   0   
@@ -403,23 +401,23 @@ Connection ~ 3650 3400
 Wire Wire Line
 	3950 3400 4050 3400
 $Comp
-L 74xx:74HC74 U8
+L 74xx:74HC74 U1
 U 3 1 5FC95660
 P 1100 7050
-F 0 "U8" H 1330 7096 50  0000 L CNN
+F 0 "U1" H 1330 7096 50  0000 L CNN
 F 1 "74AC74" H 1330 7005 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1100 7050 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1100 7050 50  0001 C CNN
 F 3 "" H 1100 7050 50  0001 C CNN
 	3    1100 7050
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C7
+L Device:C_Small C1
 U 1 1 5FC97348
 P 800 7050
-F 0 "C7" V 850 7000 50  0000 R CNN
+F 0 "C1" V 850 7000 50  0000 R CNN
 F 1 "0,1uF" V 850 7100 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 800 7050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 800 7050 50  0001 C CNN
 F 3 "~" H 800 7050 50  0001 C CNN
 	1    800  7050
 	-1   0    0    1   
@@ -447,23 +445,23 @@ Wire Wire Line
 	1200 6550 1100 6550
 Connection ~ 1100 6550
 $Comp
-L 74xx:74HC74 U8
+L 74xx:74HC74 U1
 U 1 1 5FCCBC5A
 P 3050 5050
-F 0 "U8" H 2800 5450 50  0000 C CNN
+F 0 "U1" H 2800 5450 50  0000 C CNN
 F 1 "74AC74" H 2800 5350 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3050 5050 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3050 5050 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 3050 5050 50  0001 C CNN
 	1    3050 5050
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC74 U8
+L 74xx:74HC74 U1
 U 2 1 5FCCE151
 P 4050 5050
-F 0 "U8" H 3800 5450 50  0000 C CNN
+F 0 "U1" H 3800 5450 50  0000 C CNN
 F 1 "74AC74" H 3800 5350 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4050 5050 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4050 5050 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 4050 5050 50  0001 C CNN
 	2    4050 5050
 	1    0    0    -1  
@@ -471,12 +469,12 @@ $EndComp
 Wire Wire Line
 	3350 4950 3750 4950
 $Comp
-L 74xx:74HC04 U5
+L 74xx:74HC04 U2
 U 7 1 5FCD3085
 P 2100 7050
-F 0 "U5" H 2330 7096 50  0000 L CNN
+F 0 "U2" H 2330 7096 50  0000 L CNN
 F 1 "74AC04" H 2330 7005 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2100 7050 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2100 7050 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 2100 7050 50  0001 C CNN
 	7    2100 7050
 	1    0    0    -1  
@@ -486,12 +484,12 @@ GND
 Text GLabel 2200 6450 2    50   Input ~ 0
 +5V
 $Comp
-L Device:C_Small C8
+L Device:C_Small C2
 U 1 1 5FCD54AF
 P 1800 7050
-F 0 "C8" V 1850 7000 50  0000 R CNN
+F 0 "C2" V 1850 7000 50  0000 R CNN
 F 1 "0,1uF" V 1850 7100 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 1800 7050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1800 7050 50  0001 C CNN
 F 3 "~" H 1800 7050 50  0001 C CNN
 	1    1800 7050
 	-1   0    0    1   
@@ -557,12 +555,12 @@ CLK_TOGGLE
 Wire Wire Line
 	4350 4950 4450 4950
 $Comp
-L 74xx:74LS157 U7
+L 74xx:74LS157 U8
 U 1 1 5FD30FFD
 P 7100 3950
-F 0 "U7" H 7100 4150 50  0000 C CNN
+F 0 "U8" H 7100 4150 50  0000 C CNN
 F 1 "74HC157" H 7100 4050 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 7100 3950 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7100 3950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS157" H 7100 3950 50  0001 C CNN
 	1    7100 3950
 	1    0    0    -1  
@@ -574,12 +572,12 @@ Wire Wire Line
 Wire Wire Line
 	7100 2950 7100 3050
 $Comp
-L Device:C_Small C6
+L Device:C_Small C8
 U 1 1 5FD39531
 P 6900 2950
-F 0 "C6" V 7129 2950 50  0000 C CNN
+F 0 "C8" V 7129 2950 50  0000 C CNN
 F 1 "0,1uF" V 7038 2950 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 6900 2950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6900 2950 50  0001 C CNN
 F 3 "~" H 6900 2950 50  0001 C CNN
 	1    6900 2950
 	0    -1   -1   0   
@@ -644,7 +642,7 @@ Text GLabel 7700 3350 2    50   Output ~ 0
 Z80_CLK
 Wire Wire Line
 	7700 3350 7600 3350
-Text GLabel 700  1150 1    50   Input ~ 0
+Text GLabel 900  1150 1    50   Input ~ 0
 ~INT
 Wire Wire Line
 	1350 1150 1350 1250
@@ -652,96 +650,29 @@ Wire Wire Line
 	1200 1150 1200 1550
 Wire Wire Line
 	1200 1550 1450 1550
-Text GLabel 850  1150 1    50   Input ~ 0
+Text GLabel 1050 1150 1    50   Input ~ 0
 ~NMI
 Wire Wire Line
-	700  1150 700  1950
+	900  1150 900  1950
 Wire Wire Line
-	700  1950 1450 1950
+	900  1950 1450 1950
 Wire Wire Line
-	850  1150 850  1850
-Wire Wire Line
-	850  1850 1000 1850
-$Comp
-L Device:R R3
-U 1 1 5FDE5B61
-P 1000 1450
-F 0 "R3" V 1100 1450 50  0000 C CNN
-F 1 "4K7" V 1000 1450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 930 1450 50  0001 C CNN
-F 3 "~" H 1000 1450 50  0001 C CNN
-	1    1000 1450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1000 1150 1000 1300
-Wire Wire Line
-	1000 1600 1000 1850
-Connection ~ 1000 1850
-Wire Wire Line
-	1000 1850 1450 1850
-Text GLabel 10100 3950 2    50   Output ~ 0
+	1050 1150 1050 1850
+Text GLabel 9650 3400 2    50   Output ~ 0
 ~INT
 Wire Wire Line
-	10000 3950 10100 3950
-Text GLabel 9050 3850 0    50   Input ~ 0
+	9550 3400 9650 3400
+Text GLabel 8850 3300 0    50   Input ~ 0
 ~UART_IRQ
-Text GLabel 9050 4050 0    50   Input ~ 0
+Text GLabel 8850 3500 0    50   Input ~ 0
 ~EXT_IRQ
-Wire Wire Line
-	9050 4050 9350 4050
-Wire Wire Line
-	9050 3850 9150 3850
-$Comp
-L Device:R R4
-U 1 1 5FE36C0F
-P 9150 3600
-F 0 "R4" V 9250 3600 50  0000 C CNN
-F 1 "4K7" V 9150 3600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9080 3600 50  0001 C CNN
-F 3 "~" H 9150 3600 50  0001 C CNN
-	1    9150 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5FE3776A
-P 9350 3600
-F 0 "R5" V 9450 3600 50  0000 C CNN
-F 1 "4K7" V 9350 3600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9280 3600 50  0001 C CNN
-F 3 "~" H 9350 3600 50  0001 C CNN
-	1    9350 3600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9350 3750 9350 4050
-Connection ~ 9350 4050
-Wire Wire Line
-	9350 4050 9400 4050
-Wire Wire Line
-	9150 3750 9150 3850
-Connection ~ 9150 3850
-Wire Wire Line
-	9150 3850 9400 3850
-Text GLabel 9050 3350 0    50   Input ~ 0
-+5V
-Wire Wire Line
-	9050 3350 9150 3350
-Wire Wire Line
-	9150 3350 9150 3450
-Wire Wire Line
-	9150 3350 9350 3350
-Wire Wire Line
-	9350 3350 9350 3450
-Connection ~ 9150 3350
 $Comp
 L 74xx:74HC00 U4
 U 1 1 5FE66449
 P 9250 2300
 F 0 "U4" H 9250 2625 50  0000 C CNN
 F 1 "74AC00" H 9250 2534 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9250 2300 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9250 2300 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 9250 2300 50  0001 C CNN
 	1    9250 2300
 	1    0    0    -1  
@@ -752,18 +683,18 @@ U 5 1 5FE71A5E
 P 3100 7050
 F 0 "U4" H 3330 7096 50  0000 L CNN
 F 1 "74AC00" H 3330 7005 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3100 7050 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3100 7050 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 3100 7050 50  0001 C CNN
 	5    3100 7050
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C9
+L Device:C_Small C4
 U 1 1 5FE72C62
 P 2800 7050
-F 0 "C9" V 2850 7000 50  0000 R CNN
+F 0 "C4" V 2850 7000 50  0000 R CNN
 F 1 "0,1uF" V 2850 7100 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 2800 7050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2800 7050 50  0001 C CNN
 F 3 "~" H 2800 7050 50  0001 C CNN
 	1    2800 7050
 	-1   0    0    1   
@@ -795,12 +726,12 @@ Text GLabel 9650 2300 2    50   Output ~ 0
 Wire Wire Line
 	9550 2300 9650 2300
 $Comp
-L 74xx:74HC04 U5
+L 74xx:74HC04 U2
 U 3 1 5FEAEE5A
 P 8550 2200
-F 0 "U5" H 8550 2517 50  0000 C CNN
+F 0 "U2" H 8550 2517 50  0000 C CNN
 F 1 "74AC04" H 8550 2426 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8550 2200 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8550 2200 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 8550 2200 50  0001 C CNN
 	3    8550 2200
 	1    0    0    -1  
@@ -810,12 +741,12 @@ Wire Wire Line
 Text Label 8250 2200 2    50   ~ 0
 a15
 $Comp
-L 74xx:74HC04 U5
+L 74xx:74HC04 U2
 U 2 1 5FEC5E8E
 P 1300 4650
-F 0 "U5" H 1300 4967 50  0000 C CNN
+F 0 "U2" H 1300 4967 50  0000 C CNN
 F 1 "74AC04" H 1300 4876 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1300 4650 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1300 4650 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1300 4650 50  0001 C CNN
 	2    1300 4650
 	1    0    0    -1  
@@ -838,7 +769,7 @@ U 2 1 5FEE5C73
 P 9250 2850
 F 0 "U4" H 9250 3175 50  0000 C CNN
 F 1 "74AC00" H 9250 3084 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9250 2850 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9250 2850 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 9250 2850 50  0001 C CNN
 	2    9250 2850
 	1    0    0    -1  
@@ -854,34 +785,34 @@ Text GLabel 9650 2850 2    50   Output ~ 0
 Wire Wire Line
 	9550 2850 9650 2850
 $Comp
-L 74xx:74HC04 U5
+L 74xx:74HC04 U2
 U 6 1 5FF142AA
 P 1300 6150
-F 0 "U5" H 1300 6467 50  0000 C CNN
+F 0 "U2" H 1300 6467 50  0000 C CNN
 F 1 "74AC04" H 1300 6376 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1300 6150 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1300 6150 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1300 6150 50  0001 C CNN
 	6    1300 6150
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC04 U5
+L 74xx:74HC04 U2
 U 4 1 5FF3F53A
 P 1300 5150
-F 0 "U5" H 1300 5467 50  0000 C CNN
+F 0 "U2" H 1300 5467 50  0000 C CNN
 F 1 "74AC04" H 1300 5376 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1300 5150 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1300 5150 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1300 5150 50  0001 C CNN
 	4    1300 5150
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC04 U5
+L 74xx:74HC04 U2
 U 5 1 5FF4094F
 P 5750 5250
-F 0 "U5" H 5750 5567 50  0000 C CNN
+F 0 "U2" H 5750 5567 50  0000 C CNN
 F 1 "74AC04" H 5750 5476 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5750 5250 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5750 5250 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 5750 5250 50  0001 C CNN
 	5    5750 5250
 	1    0    0    -1  
@@ -898,7 +829,7 @@ U 3 1 5FF6A1ED
 P 5750 5750
 F 0 "U4" H 5750 6075 50  0000 C CNN
 F 1 "74AC00" H 5750 5984 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5750 5750 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5750 5750 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 5750 5750 50  0001 C CNN
 	3    5750 5750
 	1    0    0    -1  
@@ -910,34 +841,34 @@ RESET
 Wire Wire Line
 	1700 5150 1600 5150
 $Comp
-L 74xx:74LS08 U1
+L 74xx:74LS08 U6
 U 2 1 606AAEA6
-P 9250 1150
-F 0 "U1" H 9250 1475 50  0000 C CNN
-F 1 "74AC08" H 9250 1384 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9250 1150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9250 1150 50  0001 C CNN
-	2    9250 1150
+P 9250 3950
+F 0 "U6" H 9250 4275 50  0000 C CNN
+F 1 "74AC08" H 9250 4184 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9250 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9250 3950 50  0001 C CNN
+	2    9250 3950
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS08 U1
+L 74xx:74LS08 U6
 U 5 1 606BB699
 P 4100 7050
-F 0 "U1" H 4330 7096 50  0000 L CNN
+F 0 "U6" H 4330 7096 50  0000 L CNN
 F 1 "74AC08" H 4330 7005 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4100 7050 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4100 7050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4100 7050 50  0001 C CNN
 	5    4100 7050
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C10
+L Device:C_Small C5
 U 1 1 606BD579
 P 3800 7050
-F 0 "C10" V 3850 7000 50  0000 R CNN
+F 0 "C5" V 3850 7000 50  0000 R CNN
 F 1 "0,1uF" V 3850 7100 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 3800 7050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3800 7050 50  0001 C CNN
 F 3 "~" H 3800 7050 50  0001 C CNN
 	1    3800 7050
 	-1   0    0    1   
@@ -964,38 +895,34 @@ Wire Wire Line
 Wire Wire Line
 	3800 6450 4100 6450
 Connection ~ 4100 6450
-Text GLabel 8500 1050 0    50   Input ~ 0
+Text GLabel 8850 3850 0    50   Input ~ 0
 ~DBG_BUSRQ
-Wire Wire Line
-	8500 1050 8650 1050
-Text GLabel 9650 1150 2    50   Output ~ 0
+Text GLabel 9650 3950 2    50   Output ~ 0
 ~BUSRQ
 Wire Wire Line
-	9550 1150 9650 1150
-Text GLabel 8500 1250 0    50   Input ~ 0
+	9550 3950 9650 3950
+Text GLabel 8850 4050 0    50   Input ~ 0
 ~EXT_BUSRQ
-Wire Wire Line
-	8500 1250 8850 1250
 $Comp
-L 74xx:74LS08 U1
+L 74xx:74LS08 U6
 U 1 1 6077574A
-P 9700 3950
-F 0 "U1" H 9700 4275 50  0000 C CNN
-F 1 "74AC08" H 9700 4184 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9700 3950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9700 3950 50  0001 C CNN
-	1    9700 3950
+P 9250 3400
+F 0 "U6" H 9250 3725 50  0000 C CNN
+F 1 "74AC08" H 9250 3634 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 9250 3400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9250 3400 50  0001 C CNN
+	1    9250 3400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	900  6150 1000 6150
 $Comp
-L 74xx:74LS08 U1
+L 74xx:74LS08 U6
 U 3 1 607F50F3
 P 5750 7400
-F 0 "U1" H 5750 7725 50  0000 C CNN
+F 0 "U6" H 5750 7725 50  0000 C CNN
 F 1 "74AC08" H 5750 7634 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5750 7400 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5750 7400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 5750 7400 50  0001 C CNN
 	3    5750 7400
 	1    0    0    -1  
@@ -1005,12 +932,12 @@ Wire Wire Line
 Wire Wire Line
 	5350 7300 5450 7300
 $Comp
-L 74xx:74LS08 U1
+L 74xx:74LS08 U6
 U 4 1 6083EFF1
 P 5750 6850
-F 0 "U1" H 5750 7175 50  0000 C CNN
+F 0 "U6" H 5750 7175 50  0000 C CNN
 F 1 "74AC08" H 5750 7084 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5750 6850 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5750 6850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 5750 6850 50  0001 C CNN
 	4    5750 6850
 	1    0    0    -1  
@@ -1033,21 +960,21 @@ Wire Wire Line
 Text GLabel 900  5650 0    50   Input ~ 0
 CLK
 $Comp
-L 74xx:74HC04 U5
+L 74xx:74HC04 U2
 U 1 1 5FCE5DC8
 P 1300 5650
-F 0 "U5" H 1300 5967 50  0000 C CNN
+F 0 "U2" H 1300 5967 50  0000 C CNN
 F 1 "74AC04" H 1300 5876 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1300 5650 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1300 5650 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 1300 5650 50  0001 C CNN
 	1    1300 5650
 	1    0    0    -1  
 $EndComp
 $Comp
-L CPU:Z80CPU U6
+L CPU:Z80CPU U3
 U 1 1 5FB5AAC0
 P 2150 2450
-F 0 "U6" H 2150 2550 50  0000 C CNN
+F 0 "U3" H 2150 2550 50  0000 C CNN
 F 1 "Z80 CPU" H 2150 2450 50  0000 C CNN
 F 2 "Package_DIP:DIP-40_W15.24mm_Socket" H 2150 2850 50  0001 C CNN
 F 3 "" H 2150 2850 50  0001 C CNN
@@ -1059,53 +986,10 @@ Text GLabel 3950 5450 0    50   Input ~ 0
 Text GLabel 2950 5450 0    50   Input ~ 0
 ~RESET
 $Comp
-L Device:R R2
-U 1 1 60FDDD7D
-P 8850 800
-F 0 "R2" V 8950 800 50  0000 C CNN
-F 1 "4K7" V 8850 800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8780 800 50  0001 C CNN
-F 3 "~" H 8850 800 50  0001 C CNN
-	1    8850 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 60FDE539
-P 8650 800
-F 0 "R1" V 8750 800 50  0000 C CNN
-F 1 "4K7" V 8650 800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8580 800 50  0001 C CNN
-F 3 "~" H 8650 800 50  0001 C CNN
-	1    8650 800 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8850 950  8850 1250
-Connection ~ 8850 1250
-Wire Wire Line
-	8850 1250 8950 1250
-Wire Wire Line
-	8650 950  8650 1050
-Connection ~ 8650 1050
-Wire Wire Line
-	8650 1050 8950 1050
-Text GLabel 8550 550  0    50   Input ~ 0
-+5V
-Wire Wire Line
-	8550 550  8650 550 
-Wire Wire Line
-	8650 550  8650 650 
-Wire Wire Line
-	8650 550  8850 550 
-Wire Wire Line
-	8850 550  8850 650 
-Connection ~ 8650 550 
-$Comp
-L Device:CP_Small C4
+L Device:CP_Small C11
 U 1 1 6107BF79
 P 10400 1300
-F 0 "C4" H 10488 1346 50  0000 L CNN
+F 0 "C11" H 10488 1346 50  0000 L CNN
 F 1 "10uF" H 10488 1255 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 10400 1300 50  0001 C CNN
 F 3 "~" H 10400 1300 50  0001 C CNN
@@ -1141,7 +1025,7 @@ U 4 1 5FF20B95
 P 5750 6300
 F 0 "U4" H 5750 6625 50  0000 C CNN
 F 1 "74AC00" H 5750 6534 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5750 6300 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5750 6300 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 5750 6300 50  0001 C CNN
 	4    5750 6300
 	1    0    0    -1  
@@ -1160,10 +1044,10 @@ F 3 "~" H 1850 6150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R6
+L Device:R R1
 U 1 1 5FCB8846
 P 2250 6150
-F 0 "R6" V 2350 6150 50  0000 C CNN
+F 0 "R1" V 2350 6150 50  0000 C CNN
 F 1 "220" V 2250 6150 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2180 6150 50  0001 C CNN
 F 3 "~" H 2250 6150 50  0001 C CNN
@@ -1286,12 +1170,12 @@ Wire Bus Line
 Text GLabel 3100 1050 1    50   BiDi ~ 0
 a[0..15]
 $Comp
-L 74xx:74LS138 U10
+L 74xx:74LS138 U9
 U 1 1 5FC4D076
 P 8950 5300
-F 0 "U10" H 8950 5300 50  0000 C CNN
+F 0 "U9" H 8950 5300 50  0000 C CNN
 F 1 "74AC138" H 8900 5200 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 8950 5300 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 8950 5300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 8950 5300 50  0001 C CNN
 	1    8950 5300
 	1    0    0    -1  
@@ -1327,7 +1211,7 @@ Text Label 8450 5100 2    50   ~ 0
 a6
 Text Label 8450 5000 2    50   ~ 0
 a5
-Text GLabel 9550 5000 2    50   Output ~ 0
+Text GLabel 9550 4900 1    50   Output ~ 0
 ~UART
 Wire Wire Line
 	9450 5000 9550 5000
@@ -1343,6 +1227,78 @@ Wire Wire Line
 Text GLabel 5350 5250 0    50   Input ~ 0
 GND
 NoConn ~ 6050 5250
+Wire Wire Line
+	1050 1850 1450 1850
+Wire Wire Line
+	8850 3500 8950 3500
+Wire Wire Line
+	8850 3300 8950 3300
+Wire Wire Line
+	8850 4050 8950 4050
+Wire Wire Line
+	8850 3850 8950 3850
+$Comp
+L Device:C_Small C10
+U 1 1 606C82E7
+P 9150 4600
+F 0 "C10" V 9379 4600 50  0000 C CNN
+F 1 "0,1uF" V 9288 4600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 9150 4600 50  0001 C CNN
+F 3 "~" H 9150 4600 50  0001 C CNN
+	1    9150 4600
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9350 4600 2    50   Input ~ 0
+GND
+Wire Wire Line
+	8950 4600 9050 4600
+Connection ~ 8950 4600
+Wire Wire Line
+	9250 4600 9350 4600
+Text GLabel 9700 4900 1    50   Output ~ 0
+~IO1
+Text GLabel 9850 4900 1    50   Output ~ 0
+~IO2
+Text GLabel 10000 4900 1    50   Output ~ 0
+~IO3
+Text GLabel 9550 5800 3    50   Output ~ 0
+~IO7
+Text GLabel 9700 5800 3    50   Output ~ 0
+~IO6
+Text GLabel 9850 5800 3    50   Output ~ 0
+~IO5
+Text GLabel 10000 5800 3    50   Output ~ 0
+~IO4
+Wire Wire Line
+	9550 4900 9550 5000
+Wire Wire Line
+	9450 5100 9700 5100
+Wire Wire Line
+	9700 5100 9700 4900
+Wire Wire Line
+	9450 5200 9850 5200
+Wire Wire Line
+	9850 5200 9850 4900
+Wire Wire Line
+	9450 5300 10000 5300
+Wire Wire Line
+	10000 5300 10000 4900
+Wire Wire Line
+	9450 5700 9550 5700
+Wire Wire Line
+	9550 5700 9550 5800
+Wire Wire Line
+	9450 5600 9700 5600
+Wire Wire Line
+	9700 5600 9700 5800
+Wire Wire Line
+	9450 5500 9850 5500
+Wire Wire Line
+	9850 5500 9850 5800
+Wire Wire Line
+	9450 5400 10000 5400
+Wire Wire Line
+	10000 5400 10000 5800
 Wire Bus Line
 	3100 2850 3100 3550
 Wire Bus Line
