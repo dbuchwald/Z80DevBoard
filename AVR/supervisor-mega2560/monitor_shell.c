@@ -38,6 +38,7 @@ static void cycleStack(cycle_buffer* buffer);
 // static void instructionsStack(cycle_buffer* buffer);
 static void goSlow(cycle_buffer* buffer);
 static void goFast(cycle_buffer* buffer);
+static void goSuperFast(cycle_buffer* buffer);
 static void resetz80(cycle_buffer* buffer);
 
 static void toggleClock(cycle_buffer* buffer);
@@ -64,7 +65,7 @@ void runMonitorShell(void) {
   displayHelp();
   while (keep_going) {
     status_register = STATUS_PIN; 
-    printf("Debugger [z|x|g|f|r|b|n|m|h|q] <CLK: %c |RD: %c |WR: %c |M1: %c |MREQ: %c |IORQ: %c |BUSACK: %c |RFSH: %c |HALT: %c >", 
+    printf("Debugger [z|x|g|f|s|r|b|n|m|h|q] <CLK: %c |RD: %c |WR: %c |M1: %c |MREQ: %c |IORQ: %c |BUSACK: %c |RFSH: %c |HALT: %c >", 
            clock_state ? '1' : '0',
            status_register & RD_BIT ? '0' : '1',
            status_register & WR_BIT ? '0' : '1',
@@ -103,6 +104,9 @@ void runMonitorShell(void) {
       case 'F':
         goFast(&cpu_buffer);
         break;
+      case 'S':
+        goSuperFast(&cpu_buffer);
+        break;
       case 'R':
         resetz80(&cpu_buffer);
         break;
@@ -126,6 +130,7 @@ void displayHelp(void) {
   printf(" [a] cycle stack trace - display Z80 stack trace (raw cycles)\n");
   printf(" [g]o slow - keep running and dumping bus to serial; press any key to stop\n");
   printf(" go [f]ast - run as fast as possible, without dumping bus data to serial\n");
+  printf(" go [s]uperfast - toggle to onboard oscillator, disable bus monitoring\n");
   printf(" [b] toggle clock line high/low - for fine CPU control\n");
   printf(" [n] toggle WAIT line high/low - for fine CPU control\n");
   printf(" [r]eset - reset Z80 and its peripherals\n");
@@ -172,6 +177,14 @@ static void goFast(cycle_buffer* buffer) {
       return;
     }
   }
+}
+
+static void goSuperFast(cycle_buffer* buffer) {
+  CLKSEL_POUT |= CLKSEL_BIT;
+  while (uart_peek() != UART_DATA_AVAILABLE) {}
+  getc(stdin);
+  CLKSEL_POUT &= ~CLKSEL_BIT;
+  return;
 }
 
 static void initBuffer(cycle_buffer* buffer) {

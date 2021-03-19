@@ -14,7 +14,7 @@ MD5_BINARY=md5sum
 # Picocom settings
 PICOCOM_BINARY=picocom
 PICOCOM_DBG_FLAGS=-b 230400 --send-cmd 'sz -X'
-PICOCOM_Z80_FLAGS=-b 19200 -fh --send-cmd 'sz -X'
+PICOCOM_Z80_FLAGS=-b 115200 -fh --send-cmd 'sz -X'
 
 # Standard utilities (rm/mkdir)
 RM_BINARY=rm

@@ -81,7 +81,7 @@ uart_init:
         ; Extended mode (b2:0=001)
         ; lda #%00110001
         ; Normal mode (b2:0=000)        
-        ld A, %00110000
+        ld A, %00110001
         ld BC, UART_W_MR0A
         out (C), A
 
