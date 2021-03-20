@@ -131,4 +131,9 @@ uart_init:
         ld BC, UART_W_CRA
         out (C), A
 
+        ; Enable RX interrupt
+        ld A, %00000010
+        ld BC, UART_W_IMR
+        out (C), A
+
         ret

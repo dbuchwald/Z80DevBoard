@@ -22,8 +22,23 @@ nmi_handler:
         retn
 
 irq_handler:
+        push BC
+        push AF
+        ld BC, UART_R_ISR
+        in A, (C)
+        and %00000010
+        jr z, not_rx
+        ld BC, UART_R_RxA
+        in A, (C)
+        ld BC, UART_W_TxA
+        out (C), A
+not_rx:
+        pop AF
+        pop BC
         ei
         reti
+
+        include "uart.inc"
 
 ; page 2 - system data
 
@@ -31,8 +46,11 @@ irq_handler:
         page 3
 program_start:
 
+        call uart_init
+
         im 1
         ld HL, tmp1
+
         ei
 loop:
         ld (HL), 0x55
