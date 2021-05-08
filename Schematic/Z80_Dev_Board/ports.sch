@@ -577,7 +577,7 @@ AR Path="/5FBD1559" Ref="C?"  Part="1"
 AR Path="/5FB5970D/5FBD1559" Ref="C13"  Part="1" 
 F 0 "C13" H 5700 5900 50  0000 L CNN
 F 1 "22pF" H 5700 5800 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5600 5850 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5600 5850 50  0001 C CNN
 F 3 "~" H 5600 5850 50  0001 C CNN
 	1    5600 5850
 	1    0    0    -1  
@@ -593,7 +593,7 @@ AR Path="/5FBD1561" Ref="C?"  Part="1"
 AR Path="/5FB5970D/5FBD1561" Ref="C14"  Part="1" 
 F 0 "C14" H 5700 6600 50  0000 L CNN
 F 1 "22pF" H 5700 6500 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5600 6550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5600 6550 50  0001 C CNN
 F 3 "~" H 5600 6550 50  0001 C CNN
 	1    5600 6550
 	1    0    0    -1  
