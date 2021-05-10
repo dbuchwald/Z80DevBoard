@@ -362,7 +362,7 @@ d6
 Text Label 9200 3000 2    50   ~ 0
 d7
 Text GLabel 8600 3000 1    50   Input ~ 0
-Z80_CLK
+~Z80_CLK
 Text GLabel 8450 3000 1    50   Input ~ 0
 ~RESET
 Wire Wire Line
