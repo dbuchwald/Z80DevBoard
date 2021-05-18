@@ -10,15 +10,16 @@
 static uint8_t control_register;
 
 void assumeBusControl(void) {
+  CONTROL_POUT |= CLK_BIT;
   // start by stopping clock
   CLKSEL_POUT &= ~CLKSEL_BIT;
-  // request bus control and bring the clock low)
-  CONTROL_POUT &= ~(BUSRQ_BIT | CLK_BIT);
+  // request bus control
+  CONTROL_POUT &= ~(BUSRQ_BIT);
   // keep clocking until BUSACK line goes low
   while (STATUS_PIN & BUSACK_BIT) {
-    CONTROL_POUT |= CLK_BIT;
-    _delay_loop_1(1);
     CONTROL_POUT &= ~CLK_BIT;
+    _delay_loop_1(1);
+    CONTROL_POUT |= CLK_BIT;
   }
   // address and data buses are all output
   ADDRMSB_DDR  = ALL_OUTPUT;
@@ -50,6 +51,7 @@ void returnBusControl(void) {
 }
 
 void resetSystem(void) {
+  CONTROL_POUT |= CLK_BIT;
   // start by stopping clock
   CLKSEL_POUT &= ~CLKSEL_BIT;
   // lower reset line
@@ -76,7 +78,7 @@ void updateControlRegister(const uint8_t value, const uint8_t mask) {
   // calculate new value
   uint8_t new_control_value = (control_register & ~safe_mask) | (value & safe_mask);
   // XOR to find bits that have changed - we can't just clear and set, it would
-  // generate two edges for some of the signals (like CLK for instane)
+  // generate two edges for some of the signals (like CLK for instance)
   uint8_t changes = control_register ^ new_control_value;
   // save new value
   control_register = new_control_value;

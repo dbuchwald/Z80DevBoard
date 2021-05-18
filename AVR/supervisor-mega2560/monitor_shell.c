@@ -38,6 +38,7 @@ static void cycleStack(cycle_buffer* buffer);
 // static void instructionsStack(cycle_buffer* buffer);
 static void goSlow(cycle_buffer* buffer);
 static void goFast(cycle_buffer* buffer);
+static void goSuperFast();
 static void resetz80(cycle_buffer* buffer);
 
 static void toggleClock(cycle_buffer* buffer);
@@ -59,7 +60,9 @@ void runMonitorShell(void) {
   uint8_t status_register;
   initBuffer(&cpu_buffer);
   // take control of system clock
-  updateControlRegister(CLKSEL_BIT, CLKSEL_BIT);
+  // updateControlRegister(CLKSEL_BIT, CLKSEL_BIT);
+  CONTROL_POUT |= CLK_BIT;
+  CLKSEL_POUT &= ~CLKSEL_BIT;
   printf("Welcome to Z80DB monitor/debugger\n");
   displayHelp();
   while (keep_going) {
@@ -103,6 +106,9 @@ void runMonitorShell(void) {
       case 'F':
         goFast(&cpu_buffer);
         break;
+      case 'S':
+        goSuperFast();
+        break;
       case 'R':
         resetz80(&cpu_buffer);
         break;
@@ -126,6 +132,7 @@ void displayHelp(void) {
   printf(" [a] cycle stack trace - display Z80 stack trace (raw cycles)\n");
   printf(" [g]o slow - keep running and dumping bus to serial; press any key to stop\n");
   printf(" go [f]ast - run as fast as possible, without dumping bus data to serial\n");
+  printf(" go [s]uper fast - use external oscillator\n");
   printf(" [b] toggle clock line high/low - for fine CPU control\n");
   printf(" [n] toggle WAIT line high/low - for fine CPU control\n");
   printf(" [r]eset - reset Z80 and its peripherals\n");
@@ -174,6 +181,20 @@ static void goFast(cycle_buffer* buffer) {
   }
 }
 
+static void goSuperFast() {
+  // raise clock before toggling
+  CONTROL_POUT |= CLK_BIT;
+  // enable external oscillator
+  CLKSEL_POUT |= CLKSEL_BIT;
+  while (1) {
+    if (uart_peek() == UART_DATA_AVAILABLE) {
+      getc(stdin);
+      CLKSEL_POUT &= ~CLKSEL_BIT;
+      return;
+    }
+  }
+}
+
 static void initBuffer(cycle_buffer* buffer) {
   buffer->write_ptr = 0;
   do {
@@ -189,17 +210,17 @@ static void initBuffer(cycle_buffer* buffer) {
 static uint8_t getOneCycleToBuffer(cycle_buffer* buffer) {
   cpu_cycle* cycle_ptr = &(buffer->cycles[buffer->write_ptr]);
 
-  // raise the clock
-  CONTROL_POUT |= CLK_BIT;
-  clock_state = 1;
+  // lower the clock
+  CONTROL_POUT &= ~CLK_BIT;
+  clock_state = 0;
   // read the busses
   cycle_ptr->addrLSB = ADDRLSB_PIN;
   cycle_ptr->addrMSB = ADDRMSB_PIN;
   cycle_ptr->data    = DATA_PIN;
   cycle_ptr->ctrl    = STATUS_PIN;
-  // lower the clock
-  CONTROL_POUT &= ~CLK_BIT;
-  clock_state = 0;
+  // raise the clock
+  CONTROL_POUT |= CLK_BIT;
+  clock_state = 1;
   buffer->write_ptr++;
   return cycle_ptr->ctrl & M1_BIT;
 }
@@ -458,6 +479,8 @@ static void toggleClock(cycle_buffer* buffer) {
     CONTROL_POUT |= CLK_BIT;
     clock_state = 1;
   } else {
+    CONTROL_POUT &= ~CLK_BIT;
+    clock_state = 0;
     // save cycle to buffer (PHI2 high)
     cpu_cycle* cycle_ptr = &(buffer->cycles[buffer->write_ptr]);
 
@@ -466,8 +489,6 @@ static void toggleClock(cycle_buffer* buffer) {
     cycle_ptr->data    = data;
     cycle_ptr->ctrl    = ctrl;
     // lower the clock
-    CONTROL_POUT &= ~CLK_BIT;
-    clock_state = 0;
     buffer->write_ptr++;
   }
 }

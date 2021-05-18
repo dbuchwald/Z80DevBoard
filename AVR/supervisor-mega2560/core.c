@@ -31,10 +31,12 @@ void initSystem(void) {
   STATUS_POUT  = ALL_PULL_UP;
 
   // default control lines values
+  // reset line high, clock high, wait high and busrq high
+  updateControlRegister(RESET_BIT | WAIT_BIT | BUSRQ_BIT, 0xff);
+  // raise the clock
+  CONTROL_POUT |= CLK_BIT;
   // debug clock to be used
   CLKSEL_POUT  &= ~CLKSEL_BIT;
-  // reset line high, clock low, wait high and busrq high
-  updateControlRegister(RESET_BIT | WAIT_BIT | BUSRQ_BIT, 0xff);
 
   // init timer
   initTimer();
