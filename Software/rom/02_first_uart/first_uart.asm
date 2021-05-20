@@ -2,10 +2,9 @@
 start:  
         include "init.inc"
         call uart_init
-        ld BC, UART_W_TxA
 loop:
         ld A, 'A'
-        out (C), A
+        out (UART_W_TxA), A
         jp loop
 
         include "uart.inc"

@@ -1,4 +1,4 @@
-UART_START   = 0x8000
+UART_START   = 0x00
 
         ; READ registers
 UART_R_MR0A  = UART_START + 0x00
@@ -47,32 +47,31 @@ UART_W_ROP12 = UART_START + 0x0f
 uart_init:
         ; Disable powerdown
         ld A, 0xf0
-        ld BC, UART_W_CRA
-        out (C), A
+        out (UART_W_CRA), A
 
         ; deassert RTS
         ld A, 0x90
-        out (C), A
+        out (UART_W_CRA), A
 
         ; reset receiver
         ld A, 0x20
-        out (C), A
+        out (UART_W_CRA), A
 
         ; reset transmitter
         ld A, 0x30
-        out (C), A
+        out (UART_W_CRA), A
 
         ; reset break irq
         ld A, 0x50
-        out (C), A
+        out (UART_W_CRA), A
 
         ; reset error
         ld A, 0x40
-        out (C), A
+        out (UART_W_CRA), A
 
         ; Write to MR0A
         ld A, 0xb0
-        out (C), A
+        out (UART_W_CRA), A
         
         ; No watchdog (b7=0)
         ; RxINT on at least one byte in FIFO (b6=0)
@@ -82,13 +81,11 @@ uart_init:
         ; lda #%00110001
         ; Normal mode (b2:0=000)        
         ld A, %00110000
-        ld BC, UART_W_MR0A
-        out (C), A
+        out (UART_W_MR0A), A
 
         ; Write to MR1A
         ld A, 0x10
-        ld BC, UART_W_CRA
-        out (C), A
+        out (UART_W_CRA), A
 
         ; Rx controls RTS (b7=1)
         ; RxINT on at least one byte in FIFO (b6=0)
@@ -97,8 +94,7 @@ uart_init:
         ; Odd parity (b2=1)
         ; 8 bits (b1:0=11)
         ld A, %10010111
-        ld BC, UART_W_MR1A
-        out (C), A
+        out (UART_W_MR1A), A
 
         ; Write to MR2A
         ; Automatically moves after access to MR1A
@@ -113,22 +109,18 @@ uart_init:
         ; CTS enables Tx (b4=1)
         ; One stop bit (b3:0=0111)
         ld A, %00010111
-        ld BC, UART_W_MR2A
-        out (C), A
+        out (UART_W_MR2A), A
 
         ; Select BRG and counter X1/16 mode
         ld A, %10110000
-        ld BC, UART_W_ACR
-        out (C), A
+        out (UART_W_ACR), A
 
         ; Select clock (19200 baud) on Tx and Rx
         ld A, %11001100
-        ld BC, UART_W_CSRA
-        out (C), A
+        out (UART_W_CSRA), A
 
         ; Enable both transmitter and receiver
         ld A, %10000101
-        ld BC, UART_W_CRA
-        out (C), A
+        out (UART_W_CRA), A
 
         ret
